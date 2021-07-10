@@ -1,10 +1,12 @@
-.Tabcontainer {
-    margin: auto;
-    width: 50%;
-    max-height: 600px;
-    margin-top: 60px;
- 
-  }
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+body {
+  color: #f7f9f9;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  font-weight: 300;
+}
 
 .title {
   margin-bottom: 25px;
@@ -19,60 +21,44 @@
   margin: 45px auto;
 }
 .tabs-body {
-  background-color: #2471a3;
+  background-color: #f2f3f4;
 }
 .tabs-header {
-
+  display: table;
   width: 100%;
-
-  background-color: red;
-  align-items: flex-start;
-  
-
+  list-style-type: none;
 }
-.tabs-header .tab-menu {
-  display: inline-block;
-  width: 50%;
+ ul {
+ padding: 0;
+}
+.tabs-header li {
+  display: table-cell;
+  text-align: center;
   color: #ecf0f1;
-  height:52px;
- 
   cursor: pointer;
-  border-width: 1;
-  background: #2471a3;
-  color: #f7f9f9;
-  
-  
-  
 }
-
-
-.tabs-header .tab-menu :hover {
-
-  background: #9d24a3;
-  color: #f7f9f9;
-
-  
-}
-.tabs-header .tab-menu  span > a  {
+.tabs-header li > a {
   display: block;
-  width:100%;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
+  padding: 15px;
+  background: #2471a3;
+  color:#000;
+  transition: all 0.2s ease-in;
+}
+.tabs-header li > a span {
+  display: block;
+}
+.tabs-header li > a:hover {
   background: #2471a3;
   color: #f7f9f9;
 }
-.tabs-header .tab-menu a:hover {
-  background: #9d24a3;
-  color: #f7f9f9;
-}
-.tabs-header .tab-menu span.active  {
-  background: #2471a3;
+.tabs-header li.active > a {
+  background: #f2f3f4;
+  color: #2471a3;
 }
 .tabs-content {
   margin-top: 0px;
   position: relative;
-
+  height:500px;
   overflow: scroll;
 
   justify-content: center;
@@ -92,7 +78,7 @@
 }
 .tabs-content .tabs-textItem p {
   font: normal 15px/1.5 "Open Sans";
-  color: #f2f3f4;
+  color: #000;
 }
 
 @keyframes change {
