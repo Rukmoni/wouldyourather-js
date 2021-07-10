@@ -24,12 +24,15 @@ h1 {
   background-color: #f2f3f4;
 }
 .tabs-header {
-  display: table;
+  display: inline-block;
   width: 100%;
   list-style-type: none;
+  background-color: #2471a3;
 }
- ul {
+.tabs-header ul {
  padding: 0;
+ display: inline;
+ background-color: #2471a3;
 }
 .tabs-header li {
   display: table-cell;
@@ -60,7 +63,7 @@ h1 {
   position: relative;
   height:500px;
   overflow: scroll;
-
+ background-color: #f2f3f4;
   justify-content: center;
   align-content: center;
 }

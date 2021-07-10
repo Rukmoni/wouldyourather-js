@@ -11,10 +11,10 @@ export function handleInitialData () {
   return (dispatch) => {
     //dispatch(showLoading())
     return getInitialData()
-      .then(({ users, tweets }) => {
+      .then(({ users, questions }) => {
        // dispatch(hideLoading())
         dispatch(getUsers(users))
-        dispatch(getQuestions(tweets))
+        dispatch(getQuestions(questions))
         dispatch(setAuthedUser(AUTHED_ID))
       })
   }
