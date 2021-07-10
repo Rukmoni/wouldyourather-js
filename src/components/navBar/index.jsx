@@ -7,7 +7,7 @@ class NavBar extends React.Component {
       
         <ul>
         <li>
-          <a href="#home">DashBoard</a>
+          <a href="/">DashBoard</a>
         </li>
         <li>
           <a href="newquestion">NewQuestion</a>
