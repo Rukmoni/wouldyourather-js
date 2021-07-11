@@ -10,6 +10,9 @@ const ScoreCard=({scoreData})=>{
    <img src={scoreData.avatarURL} alt="Avatar" className="img" />
  </div>
  <div className="centerContent">
+ <div className="name">
+    {scoreData.name}
+    </div>
     <div className="info">
     Answered Questions : {scoreData.answersCount}
     </div>
@@ -19,7 +22,8 @@ const ScoreCard=({scoreData})=>{
     </div>
     <div className="centerContent">
     <div className="scroeCard">
-      {scoreData.score}
+   <div className="scorehead">Score</div>
+    <div className="score">{scoreData.score}</div>
     </div>
     </div>
     </div>
