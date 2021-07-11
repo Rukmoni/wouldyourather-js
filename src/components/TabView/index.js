@@ -1,27 +1,26 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 import QuestionCard from '../questionCard';
 import './styles.css';
 
 export const TabsContent = ({ titles, activeIndex, questions }) => {
-    
+    const [qList,setQList]=useState();
     useEffect(()=>{
-  console.log("Reload",questions)
-    },[activeIndex])
+ 		
+		setQList(questions);
+	},[activeIndex])
+	const renderQuestions=()=>{
+		
+	let list=qList.map((question)=>{return <QuestionCard question={question}/>})
+		
+		return <div className="container">{list}</div>
+	}
 	return (
 		<div className="tabs-content">
-			{activeIndex==0?
-				<div className="container">
-                <QuestionCard/>
-           <QuestionCard/>
-					
-				</div>:<div className="container">
-                <QuestionCard/>
-           <QuestionCard/>
-           <QuestionCard/>	
-           <QuestionCard/>
-           <QuestionCard/>	
-				</div>
-			}
+		{qList?
+		renderQuestions():<div> No Questions Available to display</div>
+
+		}
+			
 		</div>
 	);
 };

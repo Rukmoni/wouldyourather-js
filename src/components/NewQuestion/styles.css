@@ -1,16 +1,16 @@
 
-.pollCardContainer{
+.resultCardContainer{
     margin: auto;
     width: 50%;
     max-height: 600px;
     margin-top: 60px;
 }
-.pollCardContainer .info{
+.resultCardContainer .info{
     color:#2471a3;
     font-size: x-large;
     
 }
-.pollCard {
+.resultCard {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -18,11 +18,11 @@
     background-color: white;
     margin: 15px;
     width: '90%';
-    height: 220px;
+    height: 420px;
     vertical-align: middle;
   }
 
-  .pollCard .titleBar {
+  .resultCard .titleBar {
     display: flex;
     padding-left: 20px;
     align-items: center;
@@ -32,18 +32,18 @@
     vertical-align: middle;
     text-align: center;
   }
-  .pollCard .pollContainer{
+  .resultCard .pollContainer{
     display: flex;
     flex-direction: row;
    position: relative;
 
   }
-  .pollCard .avatar {
+  .resultCard .avatar {
     margin: 0;
     display: flex;
    background-color: #000;
     overflow: hidden;
-    height:180px;
+    height:400px;
     width:180px;
     align-content: center;
     align-items:center;
@@ -52,7 +52,7 @@
     vertical-align: middle;
   }
   
-  .pollCard .avatar img {
+  .resultCard .avatar img {
   
     width:150px;
     height: 150px;
@@ -64,7 +64,7 @@
    
     
   }
-  .pollCard .vl {
+  .resultCard .vl {
     border-left: 1px solid #2471a3;
     height: 150px;
     position: absolute;
@@ -72,18 +72,19 @@
     top: 15%;
     margin-left: -3px;
   }
-  .pollCard .contentBlock {
+  .resultCard .contentBlock {
    
    justify-self: flex-end;
     overflow: hidden;
-    height: 180px;
+    height: 400px;
     float: right;
     width: 55%;
 
-   margin-left: 5px;
+   margin-left: 10px;
+  
    
   }
-  .pollCard .btn {
+  .resultCard .btn {
     background-color: #2471a3; /* Green */
     border: none;
     color: white;
@@ -110,6 +111,56 @@
     background-color: #2471a3;
     color: white;
   }
+  .ribbon-wrapper-1 {
+    width: 76px;
+    height: 78px;
+    overflow: hidden;
+    position: absolute;
+    top: 6px;
+    right: 6px; }
+  
+  .ribbon-1 {
+    font: bold 15px Sans-Serif;
+    line-height: 18px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -11px;
+    top: 26px;
+    width: 150px;
+    background-color: #6daaab;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px; }
+  
+  .ribbon-1:before, .ribbon-1:after {
+    content: "";
+    border-top: 4px solid #4e7c7d;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    bottom: -4px; }
+  
+  .ribbon-1:before {
+    left: 0; }
+  
+  .ribbon-1:after {
+    right: 0; }
+  
+  .ribbon-wrapper-2 {
+    width: 108px;
+    height: 108px;
+    overflow: hidden;
+    position: absolute;
+    top: -6px;
+    right: -6px; }
+  
 
   .resultContainer{
 
@@ -119,6 +170,7 @@
     height: 100px;
     align-items: center;
     border-radius: 15px;
+    margin-bottom: 15px;
   }
 
   .myProgress {
@@ -137,11 +189,5 @@
     line-height: 30px;
     color: white;
      border-radius:10px;
-  }
-
-  .textField{
-      width:90%;
-      padding: 5px;
-      margin:10px;
   }
   

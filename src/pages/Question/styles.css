@@ -1,5 +1,16 @@
 
-.card {
+.pollCardContainer{
+    margin: auto;
+    width: 50%;
+    max-height: 600px;
+    margin-top: 60px;
+}
+.pollCardContainer .info{
+    color:#2471a3;
+    font-size: x-large;
+    
+}
+.pollCard {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -10,28 +21,8 @@
     height: 220px;
     vertical-align: middle;
   }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .card .contentBlock {
-   
-    display: block;
-    overflow: hidden;
-    height: 180px;
-    float: right;
-    width: 55%;
-    margin-left: 15px;
-   
-  }
-  .contentBlock p{
-    color:'#000';
-    margin:0px;
-  }
-  .card .titleBar {
+
+  .pollCard .titleBar {
     display: flex;
     padding-left: 20px;
     align-items: center;
@@ -41,31 +32,39 @@
     vertical-align: middle;
     text-align: center;
   }
-  .card .titleBar span {
-    display: inline-block;
-    vertical-align: middle;
+  .pollCard .pollContainer{
+    display: flex;
+    flex-direction: row;
+   position: relative;
+
   }
-  .card .avatar {
+  .pollCard .avatar {
     margin: 0;
-    position: absolute;
+    display: flex;
    background-color: #000;
     overflow: hidden;
     height:180px;
     width:180px;
-    float: left;
+    align-content: center;
+    align-items:center;
+    justify-content: center;
  
     vertical-align: middle;
   }
   
-  .card .avatar img {
-    position: absolute;
+  .pollCard .avatar img {
+  
     width:150px;
     height: 150px;
-    left: 45%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+  margin: auto;
+  margin-right: auto;
+  
+    
+   
+    
   }
-  .card .vl {
+  .pollCard .vl {
     border-left: 1px solid #2471a3;
     height: 150px;
     position: absolute;
@@ -73,7 +72,18 @@
     top: 15%;
     margin-left: -3px;
   }
-  .card .btn {
+  .pollCard .contentBlock {
+   
+   justify-self: flex-end;
+    overflow: hidden;
+    height: 180px;
+    float: right;
+    width: 55%;
+
+   margin-left: 5px;
+   
+  }
+  .pollCard .btn {
     background-color: #2471a3; /* Green */
     border: none;
     color: white;
@@ -99,5 +109,33 @@
   .card .btn:hover {
     background-color: #2471a3;
     color: white;
+  }
+
+  .resultContainer{
+
+   display: flex;
+    background-color: darkgrey;
+    width:100%;
+    height: 100px;
+    align-items: center;
+    border-radius: 15px;
+  }
+
+  .myProgress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius:10px;
+    margin-left: 5px;
+    margin-right:5px;
+  }
+  
+  .myBar {
+    width: 20%;
+    height: 30px;
+    background-color: #04AA6D;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+     border-radius:10px;
   }
   

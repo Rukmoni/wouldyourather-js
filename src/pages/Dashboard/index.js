@@ -10,7 +10,7 @@ export class DashBoard extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			activeTab: 0,
+			activeTab: 1,
 		};
 		this.changeTabOnClick = this.changeTabOnClick.bind(this);
 	}
