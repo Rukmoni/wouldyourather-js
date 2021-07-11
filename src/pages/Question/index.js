@@ -96,4 +96,5 @@ function mapStateToProps({ authedUser, users, questions }, { match, question_id 
 
     return {currentQuestion,wrongPath,author,pollType};
 }
+
 export default connect(mapStateToProps)(Question);
