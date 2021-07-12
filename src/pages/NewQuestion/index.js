@@ -1,48 +1,44 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ResultView from '../../components/ResultView';
+import { Redirect} from 'react-router-dom';
+import {handleAddQuestion} from '../../reduxStore/actions/questions.actions'
 import './styles.css';
 
 
 
-/* const ResultView=({author,question})=>{
-    console.log("ResultView:",author)
-    return(
-        <div className="pollCard">
- <div className="titleBar">
-        {author.name} asks
-        </div>
-        <div className="pollContainer">
-        <div className="avatar">
-         <img src={author.avatarURL} alt="Avatar" className="img" /> 
-        </div>
-        <div className="vl"></div>
-        <div className="contentBlock">
-          <h4>
-            <b>Would you rather</b>
-          </h4>
-          <div className="resultContainer">
-          <div className="myProgress">
-              <div className="myBar">
-                  25%
-              </div>
-          </div>
-          </div>
-     
-          <button className="btn" onClick={()=>{}}>Submit</button>
-        </div>
-        </div> 
-        </div>
-    )
-
-} */
 
 export class NewQuestion extends React.Component {
-   
+   onSubmit=e=>{
+    e.preventDefault();
+
+   }
+   state = {
+    isSubmitted: false,
+    isLoading: false,
+    option1: '',
+    option2: ''
+  };
+
+  handleChange=e=>{
+    e.preventDefault();
+    this.setState({[e.target.id]:e.target.value})
+  }
+
+  handleSubmit= async(e)=>{
+    console.log("handleSubmit")
+    e.preventDefault();
+    const {authedUser,handleAddQuestion}=this.props;
+    const {option1,option2}=this.state;
+    await handleAddQuestion(option1,option2,authedUser);
+    this.setState({isSubmitted:true});
+  }
 	render() {
-        console.log(this.props)
-        const pageState = ['NoMatch', 'PollView', 'ResultView'];
-        const {wrongPath,pollType,author,currentQuestion}=this.props;
+       
+      if(this.state.isSubmitted){
+        return <Redirect to="/" />; 
+
+      }
+       
 		return (
 			<div className="pollCardContainer">
            <div className="info">
@@ -52,33 +48,20 @@ export class NewQuestion extends React.Component {
            <div className="pollCard">
  <div className="titleBar"> Add New Poll Question
  </div>
- <input type="text" className="textField" id="fname" name="fname"/>
+ <input type="text" className="textField" id="option1"  onChange={this.handleChange}/>
  or
- <input type="text" className="textField" id="fname" name="fname"/>
+ <input type="text" className="textField" id="option2" onChange={this.handleChange}/>
+ <button className="btn" onClick={this.handleSubmit}>Submit</button>   
  </div>
-           
+
 			</div>
 		);
 	}
 }
-function mapStateToProps({ authedUser, users, questions }, { match, question_id }) {
-    let currentQuestion = questions[match.params.id];
-    let currentUser=users[authedUser];
-	let wrongPath = currentQuestion ? false : true;
-	let author = '';
-	let pollType = '0';
-	if (!wrongPath&&currentUser) {
-        console.log("usersusersusers",Object.keys(currentUser.answers))
-		 author = users[currentQuestion.author];
-		 if (Object.keys(currentUser.answers).includes(currentQuestion.id)) {
-			pollType = '1';
-		} else {
-			pollType = '2';
-		}  
-    }
-    
-
-    return {currentQuestion,wrongPath,author,pollType};
+function mapStateToProps({ authedUser }) {
+  return {
+    authedUser
+  };
 }
-//export default connect(mapStateToProps)(NewQuestion);
-export default NewQuestion;
+export default connect(mapStateToProps,{handleAddQuestion})(NewQuestion);
+

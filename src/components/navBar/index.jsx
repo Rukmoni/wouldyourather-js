@@ -10,10 +10,10 @@ class NavBar extends React.Component {
           <a href="/">DashBoard</a>
         </li>
         <li>
-          <a href="newquestion">NewQuestion</a>
+          <a href="/newquestion">NewQuestion</a>
         </li>
         <li>
-          <a href="leaderboard">LeaderBoard</a>
+          <a href="/leaderboard">LeaderBoard</a>
         </li>
         <span className="right">
         <li>

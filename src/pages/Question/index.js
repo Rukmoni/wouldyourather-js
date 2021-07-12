@@ -87,9 +87,9 @@ function mapStateToProps({ authedUser, users, questions }, { match, question_id 
         console.log("usersusersusers",Object.keys(currentUser.answers))
 		 author = users[currentQuestion.author];
 		 if (Object.keys(currentUser.answers).includes(currentQuestion.id)) {
-			pollType = '1';
-		} else {
 			pollType = '2';
+		} else {
+			pollType = '1';
 		}  
     }
     

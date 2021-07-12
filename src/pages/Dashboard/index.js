@@ -38,7 +38,9 @@ export class DashBoard extends React.Component {
 }
 
 function mapStateToProps({ authedUser, users, questions }) {
-  if(authedUser){
+	console.log("authedUser",authedUser,"::users",users,"::questions=>",questions)
+  if(users){
+	  console.log(users[authedUser].answers)
   let answeredIds = Object.keys(users[authedUser]?.answers);
  // console.log("answeredIds",answeredIds)
  console.log("answeredIds::",Object.values(questions)
