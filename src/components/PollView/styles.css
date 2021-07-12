@@ -1,0 +1,193 @@
+
+.resultCardContainer{
+    margin: auto;
+    width: 50%;
+    max-height: 600px;
+    margin-top: 60px;
+}
+.resultCardContainer .info{
+    color:#2471a3;
+    font-size: x-large;
+    
+}
+.resultCard {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    color: #000;
+    background-color: white;
+    margin: 15px;
+    width: '90%';
+    height: 420px;
+    vertical-align: middle;
+  }
+
+  .resultCard .titleBar {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+ 
+    height: 40px;
+    background-color: #cccccc;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .resultCard .pollContainer{
+    display: flex;
+    flex-direction: row;
+   position: relative;
+
+  }
+  .resultCard .avatar {
+    margin: 0;
+    display: flex;
+   background-color: #000;
+    overflow: hidden;
+    height:400px;
+    width:180px;
+    align-content: center;
+    align-items:center;
+    justify-content: center;
+ 
+    vertical-align: middle;
+  }
+  
+  .resultCard .avatar img {
+  
+    width:150px;
+    height: 150px;
+    display: block;
+  margin: auto;
+  margin-right: auto;
+  
+    
+   
+    
+  }
+  .resultCard .vl {
+    border-left: 1px solid #2471a3;
+    height: 150px;
+    position: absolute;
+    left: 180px;
+    top: 15%;
+    margin-left: -3px;
+  }
+  .resultCard .contentBlock {
+   
+   justify-self: flex-end;
+    overflow: hidden;
+    height: 400px;
+    float: right;
+    width: 55%;
+
+   margin-left: 10px;
+  
+   
+  }
+  .resultCard .btn {
+    background-color: #2471a3; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #2471a3;
+  }
+  
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #2471a3;
+  }
+  
+  .card .btn:hover {
+    background-color: #2471a3;
+    color: white;
+  }
+  .ribbon-wrapper-1 {
+    width: 76px;
+    height: 78px;
+    overflow: hidden;
+    position: absolute;
+    top: 6px;
+    right: 6px; }
+  
+  .ribbon-1 {
+    font: bold 15px Sans-Serif;
+    line-height: 18px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -11px;
+    top: 26px;
+    width: 150px;
+    background-color: #6daaab;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px; }
+  
+  .ribbon-1:before, .ribbon-1:after {
+    content: "";
+    border-top: 4px solid #4e7c7d;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    bottom: -4px; }
+  
+  .ribbon-1:before {
+    left: 0; }
+  
+  .ribbon-1:after {
+    right: 0; }
+  
+  .ribbon-wrapper-2 {
+    width: 108px;
+    height: 108px;
+    overflow: hidden;
+    position: absolute;
+    top: -6px;
+    right: -6px; }
+  
+
+  .resultContainer{
+
+   display: flex;
+    background-color: darkgrey;
+    width:100%;
+    height: 100px;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .myProgress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius:10px;
+    margin-left: 5px;
+    margin-right:5px;
+  }
+  
+  .myBar {
+    width: 20%;
+    height: 30px;
+    background-color: #04AA6D;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+     border-radius:10px;
+  }
+  

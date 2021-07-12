@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import './styles.css';
 
-const NewQuestion=({author,question})=>{
+const ResultView=({author,question})=>{
     const usersState=useSelector((state)=>state.users);
     const [optionOnePercent,setOptionOnePercent]=useState('0%');
     const [optionTwoPercent,setOptionTwoPercent]=useState('0%');
@@ -19,9 +19,7 @@ const NewQuestion=({author,question})=>{
 
     },[]);
 
-    const handleGoBack=()=>{
-        
-    }
+ 
     return(
         <div className="resultCard">
   <div className="titleBar">
@@ -61,4 +59,4 @@ const NewQuestion=({author,question})=>{
 
 }
 
-export default NewQuestion;
+export default ResultView;

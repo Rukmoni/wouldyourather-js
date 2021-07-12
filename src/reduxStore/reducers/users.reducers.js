@@ -1,4 +1,4 @@
-import { GET_USERS , ADD_QUESTION_USER,SET_ANSWER } from '../actionTypes'
+import { GET_USERS , ADD_QUESTION_USER,SET_USER_ANSWER } from '../actionTypes'
 
 export default function users (state = {}, action) {
   switch (action.type) {
@@ -14,6 +14,18 @@ export default function users (state = {}, action) {
         [author]:{
           ...state[author],
           questions: state[author].questions.concat(id)
+        }
+      }
+    case SET_USER_ANSWER:
+      let {authUser,qid,answer}=action
+      return{
+        ...state,
+        [authUser]:{
+          ...state[authUser],
+          answers:{
+          ...state[action.authUser].answers,
+          [qid]:answer
+          }
         }
       }
     default :

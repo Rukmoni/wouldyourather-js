@@ -1,4 +1,4 @@
-import {GET_USERS,ADD_QUESTION_USER} from '../actionTypes';
+import {GET_USERS,ADD_QUESTION_USER,SET_USER_ANSWER} from '../actionTypes';
 export function getUsers(users){
     return {
         type:GET_USERS,
@@ -12,4 +12,17 @@ export function addQuestionToUser({ id, author }) {
       id,
       author
     };
+  }
+
+  export function setUserAnswer(authUser, qid, answer){
+    return{
+      type: SET_USER_ANSWER,
+      authUser,
+      qid,
+      answer
+    }
+  }
+
+  export function handleUserAnswerUpdate(authUser, questionId, answer) {
+    console.log("handleUserAnswerUpdate",authUser)
   }

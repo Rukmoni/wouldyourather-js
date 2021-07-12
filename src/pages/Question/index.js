@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ResultView from '../../components/ResultView';
+import PollView from '../../components/PollView';
 import './styles.css';
 
-const PollView=({author,question})=>{
+const PollView1=({author,question})=>{
     console.log("ResultView:",author)
     return(
         <div className="pollCard">
@@ -71,7 +72,7 @@ export class Question extends React.Component {
 		return (
 			<div className="pollCardContainer">
             {wrongPath?  <div className="info">404 - Question Not Available!</div>:''}
-            {pollType==1&& <div className="pollCard"></div>}
+            {pollType==1&& <PollView author={author} question={currentQuestion}/>}
             {pollType==2&& <ResultView author={author} question={currentQuestion}/>}	
 			</div>
 		);
