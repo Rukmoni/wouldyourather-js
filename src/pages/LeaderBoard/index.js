@@ -39,7 +39,7 @@ export class LeaderBoard extends React.Component {
 		return (
 			<div className="pollCardContainer">
            <div className="info">
-           LeaderBoard
+          
            </div>
         {leaderboardData.map((scoreData)=>{
           return <ScoreCard scoreData={scoreData}/>

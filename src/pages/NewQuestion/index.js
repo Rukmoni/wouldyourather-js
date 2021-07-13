@@ -43,15 +43,19 @@ export class NewQuestion extends React.Component {
 			<div className="pollCardContainer">
            <div className="info">
            
-             NewQuestion
+            
            </div>
-           <div className="pollCard">
+           <div className="questionCard">
  <div className="titleBar"> Add New Poll Question
  </div>
- <input type="text" className="textField" id="option1"  onChange={this.handleChange}/>
+ <div className="questionContent">
+ <p>Would you rather</p>
+ <input type="text" className="textInput" id="option1"  onChange={this.handleChange}/>
  or
- <input type="text" className="textField" id="option2" onChange={this.handleChange}/>
- <button className="btn" onClick={this.handleSubmit}>Submit</button>   
+ <input type="text" className="textInput" id="option2" onChange={this.handleChange}/>
+ <div className="spacerH"/>
+ <button className="buttonCommonWide" onClick={this.handleSubmit}>Submit</button>   
+ </div>
  </div>
 
 			</div>

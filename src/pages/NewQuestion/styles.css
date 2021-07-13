@@ -2,7 +2,7 @@
 .pollCardContainer{
     margin: auto;
     width: 50%;
-    max-height: 600px;
+    min-height: 640px;
     margin-top: 60px;
 }
 .pollCardContainer .info{
@@ -10,7 +10,7 @@
     font-size: x-large;
     
 }
-.pollCard {
+.questionCard {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -18,11 +18,21 @@
     background-color: white;
     margin: 15px;
     width: '90%';
-    height: 220px;
+    height: 340px;
     vertical-align: middle;
+    display: flex;
+    flex-direction: column;
   }
+.questionContent{
+  display: flex;
+  flex-direction: column;
+  width:'90%';
+  padding:20px;
+  justify-content: space-between;
+  align-items: center;
 
-  .pollCard .titleBar {
+}
+  .questionCard .titleBar {
     display: flex;
     padding-left: 20px;
     align-items: center;
@@ -32,99 +42,17 @@
     vertical-align: middle;
     text-align: center;
   }
-  .pollCard .pollContainer{
+  .questionCard .pollContainer{
     display: flex;
     flex-direction: row;
    position: relative;
 
   }
-  .pollCard .avatar {
-    margin: 0;
-    display: flex;
-   background-color: #000;
-    overflow: hidden;
-    height:180px;
-    width:180px;
-    align-content: center;
-    align-items:center;
-    justify-content: center;
- 
-    vertical-align: middle;
-  }
-  
-  .pollCard .avatar img {
-  
-    width:150px;
-    height: 150px;
-    display: block;
-  margin: auto;
-  margin-right: auto;
-  
-    
-   
-    
-  }
-  .pollCard .vl {
-    border-left: 1px solid #2471a3;
-    height: 150px;
-    position: absolute;
-    left: 180px;
-    top: 15%;
-    margin-left: -3px;
-  }
-  .pollCard .contentBlock {
-   
-   justify-self: flex-end;
-    overflow: hidden;
-    height: 180px;
-    float: right;
-    width: 55%;
 
-   margin-left: 5px;
-   
-  }
-  .pollCard .btn {
-    background-color: #2471a3; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid #2471a3;
+  .textInput{
+    padding:12px;
+    margin:5px;
+    width:330px
   }
   
-  .button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #2471a3;
-  }
-  
-  .card .btn:hover {
-    background-color: #2471a3;
-    color: white;
-  }
-
-  .resultContainer{
-
-   display: flex;
-    background-color: darkgrey;
-    width:100%;
-    height: 100px;
-    align-items: center;
-    border-radius: 15px;
-  }
-
-  
-  .textField{
-      width:90%;
-      padding: 5px;
-      margin:10px;
-  }
   
