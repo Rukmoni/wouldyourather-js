@@ -38,38 +38,38 @@
    position: relative;
 
   }
-  .resultCard .avatar {
+  .resultCard .avatartall {
     margin: 0;
     display: flex;
-   background-color: #000;
-    overflow: hidden;
-    height:400px;
+   overflow: hidden;
+    height:380px;
     width:180px;
-    align-content: center;
-    align-items:center;
-    justify-content: center;
- 
-    vertical-align: middle;
+  background-color: var(--grayBg);
+
+ justify-content: center;
+
   }
   
-  .resultCard .avatar img {
+  .resultCard .avatartall img {
   
-    width:150px;
-    height: 150px;
-    display: block;
-  margin: auto;
-  margin-right: auto;
+   
+    width:120px;
+    height: 120px;
+    margin-top: 50px;
+    border-radius: 80px;
+    border: solid var(--secondary);
+    border-width: 1px;
   
     
    
     
   }
-  .resultCard .vl {
-    border-left: 1px solid #2471a3;
-    height: 150px;
+  .resultCard .divider {
+    border-left: 1px solid var(--secondary);
+    height: 350px;
     position: absolute;
     left: 180px;
-    top: 15%;
+    top: 5%;
     margin-left: -3px;
   }
   .resultCard .contentBlock {
@@ -162,20 +162,40 @@
     right: -6px; }
   
 
-  .resultContainer{
+  .grayBox{
 
    display: flex;
-    background-color: darkgrey;
+   flex-direction: column;
+
+    background-color:var(--grayBg);
     width:100%;
     height: 100px;
-    align-items: center;
-    border-radius: 15px;
+
+    border-radius: 5px;
     margin-bottom: 15px;
+  }
+  .resultContent{
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+    position: relative;
+    top:-30px;
+    left:10px;
+    align-content: space-evenly;
+ 
+  }
+  .normalContent{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+    top:10Px;
+    left:10px;
   }
 
   .myProgress {
-    width: 100%;
-    background-color: #ddd;
+    width: 85%;
+    background-color:var(--primary);
     border-radius:10px;
     margin-left: 5px;
     margin-right:5px;
@@ -184,10 +204,34 @@
   .myBar {
     width: 20%;
     height: 30px;
-    background-color: #04AA6D;
+    background-color:var(--secondary);
     text-align: center;
     line-height: 30px;
     color: white;
      border-radius:10px;
+  }
+
+  .c-corner-label {
+    position: absolute;
+    
+    border-style: solid;
+    border-color: transparent #36b274 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #36b274 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+    height: 0;
+    width: 100px;
+    border-width: 0 60px 60px 0;
+  }
+  .c-corner-label__text {
+      color: #eee;
+      font-size: 12px;
+      font-weight: bold;
+      position: relative;
+      left: -3.9;
+      top: 9.6;
+      white-space: nowrap;
+      transform: rotate(45deg);
+      width: 220;
+      text-align: center;
+      line-height: 2em;
   }
   

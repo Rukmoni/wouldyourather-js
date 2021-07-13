@@ -120,22 +120,3 @@
     align-items: center;
     border-radius: 15px;
   }
-
-  .myProgress {
-    width: 100%;
-    background-color: #ddd;
-    border-radius:10px;
-    margin-left: 5px;
-    margin-right:5px;
-  }
-  
-  .myBar {
-    width: 20%;
-    height: 30px;
-    background-color: #04AA6D;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-     border-radius:10px;
-  }
-  
