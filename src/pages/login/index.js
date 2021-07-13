@@ -9,7 +9,7 @@ const Login = ({ users }) => {
 	const dispatch = useDispatch();
 	const [loginOptions, setLoginOptions] = useState([]);
 	useEffect(() => {
-		console.log('login rendered', users);
+		
 		const map = new Map(Object.entries(users));
 		let _userList = Object.values(users);
 		console.log('usersState', _userList);
@@ -20,7 +20,7 @@ const Login = ({ users }) => {
 			value: user.id,
 			image: { avatar: true, src: user.avatarURL },
 		}));
-		console.log('usersState', _loginOptions);
+	
 		setLoginOptions(_loginOptions);
 	}, [users]);
 

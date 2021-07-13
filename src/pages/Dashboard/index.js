@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { TabsHeader, TabsContent } from '../../components/TabView';
 import './styles.css';
@@ -36,15 +37,14 @@ export class DashBoard extends React.Component {
 		);
 	}
 }
-
+DashBoard.propTypes={
+	answeredQuestions:PropTypes.array,
+    unAnsweredQuestions:PropTypes.array
+}
 function mapStateToProps({ authedUser, users, questions }) {
-	console.log("authedUser",authedUser,"::users",users,"::questions=>",questions)
   if(users){
 	  console.log(users[authedUser].answers)
   let answeredIds = Object.keys(users[authedUser]?.answers);
- // console.log("answeredIds",answeredIds)
- console.log("answeredIds::",Object.values(questions)
-  .filter((question) => answeredIds.includes(question.id)))
 
 	return {
 	answeredQuestions: Object.values(questions)

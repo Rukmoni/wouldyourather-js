@@ -1,48 +1,52 @@
-import React,{useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import QuestionCard from '../questionCard';
 import './styles.css';
 
-export const TabsContent = ({ titles, activeIndex, questions }) => {
-    const [qList,setQList]=useState();
-    useEffect(()=>{
- 		
+const TabsContent = ({ activeIndex, questions }) => {
+
+	const [qList, setQList] = useState();
+
+	useEffect(() => {
 		setQList(questions);
-	},[activeIndex])
-	const renderQuestions=()=>{
-		
-	let list=qList.map((question)=>{return <QuestionCard question={question}/>})
-		
-		return <div className="container">{list}</div>
-	}
-	return (
-		<div className="tabs-content">
-		{qList?
-		renderQuestions():<div> No Questions Available to display</div>
+	}, [activeIndex]);
 
-		}
-			
-		</div>
+	const renderQuestions = () => {
+		let list = qList.map((question) => {return <QuestionCard question={question} />});
+		return <div className="container">{list}</div>;
+	};
+
+	return (
+		<div className="tabs-content">{qList ? renderQuestions() : <div> No Questions Available to display</div>}</div>
 	);
 };
 
-export const TabsHeader = ({ titles, activeIndex, onChangeIndex }) => {
+const TabsHeader = ({ titles, activeIndex, onChangeIndex }) => {
 	return (
-        <>
-		<div className="tabs-header">
-       
-			{titles.map((item, index) => {
-				return (
-					
+		<>
+			<div className="tabs-header">
+				{titles.map((item, index) => {
+					return (
 						<li className={activeIndex === index ? 'active' : ''}>
-							<a onClick={()=>onChangeIndex(index)}>
-								{item.name}
-							</a>
+							<a onClick={() => onChangeIndex(index)}>{item.name}</a>
 						</li>
-					
-				);
-			})}
-           
-		</div>
-        </>
+					);
+				})}
+			</div>
+		</>
 	);
 };
+
+TabsContent.propTypes={
+	 titles:PropTypes.array,
+	activeIndex:PropTypes.number,
+	onChangeIndex:PropTypes.func
+}
+TabsHeader.propTypes={
+
+	activeIndex:PropTypes.number,
+	questions:PropTypes.object
+}
+
+
+export {TabsContent,TabsHeader}
