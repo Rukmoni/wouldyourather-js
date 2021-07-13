@@ -10,12 +10,7 @@ const Login = ({users}) => {
     useEffect(()=>{
       console.log("login rendered",users)
       const map = new Map(Object.entries(users));
-      let _userList=Object.values(users);/* .forEach((user) => ({
-        key: user.id,
-        label: user.name,
-        value: user.id,
-        image: { avatar: true, src: user.avatarURL }
-      }));  */
+      let _userList=Object.values(users);
       console.log("usersState",_userList);
       //setUsers(usersState)
      let _loginOptions=_userList.map((user)=>  ({
@@ -42,9 +37,11 @@ const Login = ({users}) => {
     </div>
     <div className="content">
     <p>Login</p>
-    <div  style={{width:'400px'}}>
+    <div  style={{width:'400px',alignItems:'center'}}>
     <Select options={loginOptions} />
-    <button onClick={()=>dispatch(setAuthedUser('tylermcginnis'))}>Login</button>
+    <div className="spacerH"/>
+    <div className="spacerH"/>
+    <button className="buttonCommonWide" onClick={()=>dispatch(setAuthedUser('tylermcginnis'))}>Login</button>
     </div>
     </div>
     </div>
