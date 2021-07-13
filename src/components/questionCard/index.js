@@ -10,7 +10,7 @@ const QuestionCard=({question})=> {
 
     return (
       <div className="card">
-        <div className="titleBar">
+        <div className="questionTitle">
         {question.author} asks
        
         </div>
@@ -25,7 +25,7 @@ const QuestionCard=({question})=> {
           <p>{question.optionOne.text}</p>
           <p>or</p>
        
-          <button className="btn" onClick={()=>history.push(`/question/${question.id}`)}> View Poll</button>
+          <button className="buttonCommonWide" onClick={()=>history.push(`/question/${question.id}`)}> View Poll</button>
          
         </div>
       </div>

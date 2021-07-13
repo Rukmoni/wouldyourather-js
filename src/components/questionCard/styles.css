@@ -31,15 +31,18 @@
     color:'#000';
     margin:0px;
   }
-  .card .titleBar {
+  .card .questionTitle {
     display: flex;
     padding-left: 20px;
-    align-items: center;
  
+ align-items: center;
     height: 40px;
     background-color: #cccccc;
     vertical-align: middle;
-    text-align: center;
+    border: solid var(--primary);
+    border-width: 0px;
+    border-top-width: 2px;
+  
   }
   .card .titleBar span {
     display: inline-block;
@@ -48,10 +51,10 @@
   .card .avatar {
     margin: 0;
     position: absolute;
-   background-color: #000;
+
     overflow: hidden;
-    height:180px;
-    width:180px;
+    height:140px;
+    width:140px;
     float: left;
  
     vertical-align: middle;
@@ -59,15 +62,16 @@
   
   .card .avatar img {
     position: absolute;
-    width:150px;
-    height: 150px;
-    left: 45%;
+    width:120px;
+    height: 120px;
+    border-radius: 60px;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   .card .vl {
-    border-left: 1px solid #2471a3;
-    height: 150px;
+    border-left: 1px solid var(--grayBg);
+    height: 120px;
     position: absolute;
     left: 180px;
     top: 15%;
