@@ -4,7 +4,7 @@ import {getUsers} from './users.actions';
 import {getQuestions} from './questions.actions';
 import {setAuthedUser} from './authUser.actions';
 import {showLoading,hideLoading} from 'react-redux-loading';
-const AUTHED_ID = 'tylermcginnis'
+//const AUTHED_ID = 'tylermcginnis'
 
 export function handleInitialData () {
     console.log("handleInitialData")
@@ -15,7 +15,7 @@ export function handleInitialData () {
         dispatch(hideLoading())
         dispatch(getUsers(users))
         dispatch(getQuestions(questions))
-        dispatch(setAuthedUser(AUTHED_ID))
+       // dispatch(setAuthedUser(AUTHED_ID))
       })
   }
 }
