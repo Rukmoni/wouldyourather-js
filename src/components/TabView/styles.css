@@ -20,47 +20,56 @@ h1 {
   width: 440px;
   margin: 45px auto;
 }
-.tabs-body {
-  background-color: #f2f3f4;
-}
+
 .tabs-header {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  min-width: 500px;
   list-style-type: none;
-  background-color: #2471a3;
+  background-color: var(--grayBg);
+  border-width: 1;
+  border: solid var(--secondary);
+  border-width: 0px;
+  border-bottom-width: 5px;
 }
 .tabs-header ul {
  padding: 0;
  display: inline;
- background-color: #2471a3;
+ 
 }
 .tabs-header li {
   display: table-cell;
   text-align: center;
   color: #ecf0f1;
   cursor: pointer;
+ 
 }
 .tabs-header li > a {
   display: block;
   padding: 15px;
-  background: #2471a3;
-  color:#000;
+  background: var(--primary);
+  color:#fff;
   transition: all 0.2s ease-in;
+  border: solid var(--secondary);
+  border-width: 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+
 }
 .tabs-header li > a span {
   display: block;
 }
 .tabs-header li > a:hover {
-  background: #2471a3;
+  background: var(--secondary);
   color: #f7f9f9;
 }
 .tabs-header li.active > a {
-  background: #f2f3f4;
-  color: #2471a3;
+  background-color: var(--secondary);
+  color: #fff;
 }
 .tabs-content {
   margin-top: 0px;
   position: relative;
+  min-width: 500px;
   height:500px;
   overflow: scroll;
  background-color: #f2f3f4;

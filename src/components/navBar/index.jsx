@@ -1,7 +1,10 @@
 import React from "react";
+import { setAuthedUser} from '../../reduxStore/actions/authUser.actions';
+import {useSelector,useDispatch} from 'react-redux';
 import "./styles.css";
-class NavBar extends React.Component {
-  render() {
+const NavBar=()=> {
+  const authedUser=useSelector((state)=>state.authedUser)
+    const dispatch=useDispatch();
     return (
       <div className="nav">
       
@@ -17,16 +20,16 @@ class NavBar extends React.Component {
         </li>
         <span className="right">
         <li>
-          <a href="#contact">Contact</a>
+          <p>Welcome!{ ' '} {authedUser}</p>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+        <button className="buttonDark" onClick={()=>{dispatch(setAuthedUser(null))}}>Logout</button>
+         
         </li>
         </span>
       </ul>
       </div>
     )
-}
-}
+    }
 
 export default NavBar;

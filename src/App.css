@@ -1,7 +1,24 @@
+
+.Appbody{
+
+  height:'100%';
+}
 .App {
   text-align: center;
 }
 
+.buttonDark {
+  background-color:var(--primary); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
