@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard';
 import LeaderBoard from './pages/LeaderBoard';
 import NewQuestion from './pages/NewQuestion';
 import Question from './pages/Question';
-import Login from './pages/Login';
+import Login from './pages/LoginNew';
 import { handleInitialData} from './reduxStore/actions/shared.actions';
 import LoadingBar from 'react-redux-loading'
 import './App.css';
