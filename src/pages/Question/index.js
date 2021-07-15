@@ -17,8 +17,8 @@ export class Question extends React.Component {
 		return (
 			<div className="pollCardContainer">
             {wrongPath?  <div className="info">404 - Question Not Available!</div>:''}
-            {pollType===1&& <PollView author={author} question={currentQuestion}/>}
-            {pollType===2&& <ResultView author={author} question={currentQuestion}/>}	
+            {pollType==='1'&& <PollView author={author} question={currentQuestion}/>}
+            {pollType==='2'&& <ResultView author={author} question={currentQuestion}/>}	
 			</div>
 		);
 	}

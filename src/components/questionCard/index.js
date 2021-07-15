@@ -2,7 +2,7 @@ import React from "react";
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import "./styles.css";
-const QuestionCard=({question})=> {
+const QuestionCard=({question,activeIndex})=> {
   const usersState=useSelector((state)=>state.users);
   const history = useHistory();
   console.log(question);
@@ -25,7 +25,7 @@ const QuestionCard=({question})=> {
           <p>{question.optionOne.text}</p>
           <p>or</p>
        
-          <button className="buttonCommonWide" onClick={()=>history.push(`/question/${question.id}`)}> View Poll</button>
+          <button className={activeIndex===0?"buttonPoll":"buttonViewResult"} onClick={()=>history.push(`/question/${question.id}`)}> {activeIndex===0?"ViewPoll":"View Result"}</button>
          
         </div>
       </div>

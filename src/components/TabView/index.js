@@ -12,7 +12,7 @@ const TabsContent = ({ activeIndex, questions }) => {
 	}, [questions]);
 
 	const renderQuestions = () => {
-		let list = qList.map((question) => {return <QuestionCard key={question.id} question={question} />});
+		let list = qList.map((question) => {return <QuestionCard key={question.id} activeIndex={activeIndex} question={question} />});
 		return <div className="container">{list}</div>;
 	};
 

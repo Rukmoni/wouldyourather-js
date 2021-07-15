@@ -25,11 +25,15 @@
     float: right;
     width: 55%;
     margin-left: 15px;
+    align-items: center;
+    justify-content: center;
    
   }
   .contentBlock p{
     color:'#000';
     margin:0px;
+    align-items: center;
+    justify-content: center;
   }
   .card .questionTitle {
     display: flex;
@@ -103,5 +107,33 @@
   .card .btn:hover {
     background-color: #2471a3;
     color: white;
+  }
+
+  .buttonViewResult{
+    background-color:var(--secondary); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%;
+
+  }
+  .buttonPoll{
+    background-color:var(--primary); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%;
+
+
   }
   

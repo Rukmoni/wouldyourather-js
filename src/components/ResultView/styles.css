@@ -17,7 +17,7 @@
     color: #000;
     background-color: white;
     margin: 15px;
-    width: '90%';
+    width: 600px;
     height: 420px;
     vertical-align: middle;
   }
@@ -78,7 +78,7 @@
     overflow: hidden;
     height: 400px;
     float: right;
-    width: 55%;
+    width: 600px;
 
    margin-left: 10px;
   
@@ -233,5 +233,17 @@
       width: 220;
       text-align: center;
       line-height: 2em;
+  }
+
+  .leftalign{
+
+   position: relative;
+width:80%;
+
+  
+   
+    text-align: right;
+ 
+    align-items: flex-end;
   }
   

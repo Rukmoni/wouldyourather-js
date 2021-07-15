@@ -16,9 +16,13 @@ export class DashBoard extends React.Component {
 		this.changeTabOnClick = this.changeTabOnClick.bind(this);
 	}
 	changeTabOnClick(id) {
+		
 		this.setState({ activeTab: id });
 	}
 	render() {
+		console.log("answered",this.props.answeredQuestions);
+		console.log("answered",this.props.unAnsweredQuestions);
+
 		return (
 			<div className="Tabcontainer">
 				<TabsHeader
@@ -30,7 +34,7 @@ export class DashBoard extends React.Component {
 					titles={TabTitles}
 					activeIndex={this.state.activeTab}
 					questions={
-						this.state.activeTab === 0 ? this.props.unAnsweredQuestions : this.props.answeredQuestions
+						this.state.activeTab == 0 ? this.props.unAnsweredQuestions : this.props.answeredQuestions
 					}
 				/>
 			</div>
@@ -47,10 +51,10 @@ function mapStateToProps({ authedUser, users, questions }) {
   let answeredIds = Object.keys(users[authedUser]?.answers);
 
 	return {
-	answeredQuestions: Object.values(questions)
+	unAnsweredQuestions: Object.values(questions)
 			.filter((question) => !answeredIds.includes(question.id))
 			.sort((a, b) => b.timestamp - a.timestamp),
-		unAnsweredQuestions: Object.values(questions)
+		answeredQuestions: Object.values(questions)
 			.filter((question) => answeredIds.includes(question.id))
 			.sort((a, b) => b.timestamp - a.timestamp), 
   };

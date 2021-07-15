@@ -5,8 +5,8 @@ import './styles.css';
 const Badge = () => {
 	return (
 		<div class="wrapper">
-			<div class="ribbon-wrapper-red">
-				<div class="ribbon-red">You</div>
+			<div class="ribbon-wrapper-green">
+				<div class="ribbon-green">You</div>
 			</div>
 		</div>
 	);
@@ -37,7 +37,7 @@ const ResultView = ({ author, question }) => {
 				<div className="avatartall">
 					<img src={author.avatarURL} alt="Avatar" className="img" />
 				</div>
-				<div className="divider"></div>
+				
 				<div className="contentBlock">
 					<h3>
 						<b>Results:</b>
@@ -49,7 +49,7 @@ const ResultView = ({ author, question }) => {
 						{yourVote === 'optionOne' && <Badge />}
 
 						<div className={yourVote === 'optionOne' ? 'resultContent' : 'normalContent'}>
-							<p>{question.optionOne.text}</p>
+							<div className="leftalign">{question.optionOne.text}</div>
 							<div className="spacerH"></div>
 							<div className="myProgress">
 								<div className="myBar" style={{ width: `${optionOnePercent}` }}>
@@ -61,7 +61,8 @@ const ResultView = ({ author, question }) => {
 
 					<div className="grayBox">
 						<div className="normalContent">
-							<p>{question.optionTwo.text}</p>
+                        <div className="leftalign">{question.optionTwo.text}</div>
+			
 							<div className="spacerH"></div>
 							<div className="myProgress">
 								<div className="myBar" style={{ width: `${optionTwoPercent}` }}>
