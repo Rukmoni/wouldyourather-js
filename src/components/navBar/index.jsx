@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { setAuthedUser} from '../../reduxStore/actions/authUser.actions';
 import {useSelector,useDispatch} from 'react-redux';
 import "./styles.css";
@@ -10,13 +11,16 @@ const NavBar=()=> {
       
         <ul>
         <li>
-          <a href="/">DashBoard</a>
+         {/*  <a href="/">DashBoard</a> */}
+         <Link to="/">DashBoard</Link>
         </li>
         <li>
-          <a href="/newquestion">NewQuestion</a>
+         {/*  <a href="/newquestion">NewQuestion</a> */}
+         <Link to="/newquestion">NewQuestion</Link>
         </li>
         <li>
-          <a href="/leaderboard">LeaderBoard</a>
+          {/* <a href="/leaderboard">LeaderBoard</a> */}
+          <Link to="/leaderboard">LeaderBoard</Link>
         </li>
         <span className="right">
         <li>
