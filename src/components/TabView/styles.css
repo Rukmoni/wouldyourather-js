@@ -43,7 +43,20 @@ h1 {
   cursor: pointer;
  
 }
+
 .tabs-header li > a {
+  display: block;
+  padding: 15px;
+  background: var(--primary);
+  color:#fff;
+  transition: all 0.2s ease-in;
+  border: solid var(--secondary);
+  border-width: 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+
+}
+.tabButton {
   display: block;
   padding: 15px;
   background: var(--primary);

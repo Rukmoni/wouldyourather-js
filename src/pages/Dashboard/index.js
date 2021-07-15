@@ -30,7 +30,7 @@ export class DashBoard extends React.Component {
 					titles={TabTitles}
 					activeIndex={this.state.activeTab}
 					questions={
-						this.state.activeTab == 1 ? this.props.unAnsweredQuestions : this.props.answeredQuestions
+						this.state.activeTab === 1 ? this.props.unAnsweredQuestions : this.props.answeredQuestions
 					}
 				/>
 			</div>

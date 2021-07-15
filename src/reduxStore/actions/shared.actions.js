@@ -2,7 +2,7 @@
 import {getInitialData} from '../../database/api';
 import {getUsers} from './users.actions';
 import {getQuestions} from './questions.actions';
-import {setAuthedUser} from './authUser.actions';
+//import {setAuthedUser} from './authUser.actions';
 import {showLoading,hideLoading} from 'react-redux-loading';
 //const AUTHED_ID = 'tylermcginnis'
 
