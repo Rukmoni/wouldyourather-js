@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import './styles.css';
 
 const Badge = () => {
@@ -30,7 +28,7 @@ const ResultView = ({ author, question }) => {
 
 		setOptionOnePercent(percent1);
 		setOptionTwoPercent(percent2);
-	}, []);
+	}, [author,question]);
 
 	return (
 		<div className="resultCard">

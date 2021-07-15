@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useEffect} from 'react'
+import React, { Component, Fragment} from 'react'
 import {connect} from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import {NavBar} from './components';

@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import {saveQuestionAnswer} from '../../database/api';
-import {handleUserAnswerUpdate} from '../../reduxStore/actions/users.actions';
 import { setUserAnswer} from '../../reduxStore/actions/users.actions';
 import { updateAnswerInQuestion} from '../../reduxStore/actions/questions.actions';
 import './styles.css';
 
 const PollView=({author,question})=>{
-    const usersState=useSelector((state)=>state.users);
+
     const authedUser=useSelector((state)=>state.authedUser);
     const dispatch=useDispatch();
-    const [userOption,setUserOption]=useState(0);
-    console.log("ResultView:",question)
+
  
 
     const handleSubmit=async ()=>{
