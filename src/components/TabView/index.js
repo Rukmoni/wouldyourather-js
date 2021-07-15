@@ -9,10 +9,10 @@ const TabsContent = ({ activeIndex, questions }) => {
 
 	useEffect(() => {
 		setQList(questions);
-	}, [activeIndex]);
+	}, [questions]);
 
 	const renderQuestions = () => {
-		let list = qList.map((question) => {return <QuestionCard question={question} />});
+		let list = qList.map((question) => {return <QuestionCard key={question.id} question={question} />});
 		return <div className="container">{list}</div>;
 	};
 
@@ -27,7 +27,7 @@ const TabsHeader = ({ titles, activeIndex, onChangeIndex }) => {
 			<div className="tabs-header">
 				{titles.map((item, index) => {
 					return (
-						<li className={activeIndex === index ? 'active' : ''}>
+						<li key={item.name} className={activeIndex === index ? 'active' : ''}>
 							<a onClick={() => onChangeIndex(index)}>{item.name}</a>
 						</li>
 					);
