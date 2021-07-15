@@ -40,7 +40,7 @@
    max-width: 600px;
 
   }
-  .resultCard .avatar {
+  .resultCard .pollavatar {
     margin: 0;
     display: flex;
 
@@ -85,6 +85,19 @@
    margin-left: 10px;
   
    
+  }
+  .pollBlock{
+    flex:1;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    height: 300px;
+
+width:70%;
+   margin-left: 50px;
+   margin-top:40px;
+
   }
   .resultCard .btn {
     background-color: #2471a3; /* Green */

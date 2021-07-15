@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './styles.css';
 
@@ -71,7 +72,8 @@ const ResultView = ({ author, question }) => {
 							</div>
 						</div>
 					</div>
-					<a href="/">back</a>
+                    <Link to="/">back</Link>
+			
 				</div>
 			</div>
 		</div>

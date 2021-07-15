@@ -31,18 +31,18 @@ const PollView=({author,question})=>{
         {author.name} asks
         </div> 
         <div className="pollContainer">
-        <div className="avatar">
+        <div className="avatartall">
          <img src={author.avatarURL} alt="Avatar" className="img" />  
         </div>
-        <div className="vl"></div>
-        <div className="contentBlock">
+        
+        <div className="pollBlock">
           <h4>
             <b>Would you rather</b>
           </h4>
           <p> <input type="radio" value="optionOne" name="option" />{question.optionOne.text}</p>
          
           <p> <input type="radio" value="optionTwo" name="option" />{question.optionTwo.text}</p>
-          <button className="btn" onClick={handleSubmit}>Submit</button>
+          <button className="buttonCommonWide" onClick={handleSubmit}>Submit</button>
         </div>
         </div> 
         </div>
