@@ -27,8 +27,8 @@ const TabsHeader = ({ titles, activeIndex, onChangeIndex }) => {
 			<div className="tabs-header">
 				{titles.map((item, index) => {
 					return (
-						<li key={item.name} className={activeIndex === index ? 'active' : ''}>
-							<button className="tabButton" onClick={() => onChangeIndex(index)}>{item.name}</button>
+						<li key={item.name}>
+							<button className={activeIndex === index ? 'tabButtonActive' : 'tabButton'} onClick={() => onChangeIndex(index)}>{item.name}</button>
 						</li>
 					);
 				})}

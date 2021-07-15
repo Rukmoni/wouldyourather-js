@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { TabsHeader, TabsContent } from '../../components/TabView';
 import './styles.css';
 const TabTitles = [
-	{ id: 1, name: 'UnAnswered Questions' },
-	{ id: 2, name: 'Answered Questions' },
+	{ id: 0, name: 'UnAnswered Questions' },
+	{ id: 1, name: 'Answered Questions' },
 ];
 export class DashBoard extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			activeTab: 1,
+			activeTab: 0,
 		};
 		this.changeTabOnClick = this.changeTabOnClick.bind(this);
 	}
@@ -30,7 +30,7 @@ export class DashBoard extends React.Component {
 					titles={TabTitles}
 					activeIndex={this.state.activeTab}
 					questions={
-						this.state.activeTab === 1 ? this.props.unAnsweredQuestions : this.props.answeredQuestions
+						this.state.activeTab === 0 ? this.props.unAnsweredQuestions : this.props.answeredQuestions
 					}
 				/>
 			</div>
