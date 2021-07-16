@@ -8,6 +8,7 @@ import './styles.css';
 const Login = ({ users }) => {
 	const dispatch = useDispatch();
 	const [loginOptions, setLoginOptions] = useState([]);
+	const [user,setUser]=useState(null);
 	useEffect(() => {
 		
 		
@@ -23,6 +24,12 @@ const Login = ({ users }) => {
 		setLoginOptions(_loginOptions);
 	}, [users]);
 
+	const handleLogin=()=>{
+		if(user){
+			dispatch(setAuthedUser(user))
+		}
+
+	}
 	return (
 		<div className="loginContainer">
 			<div className="loginCard">
@@ -32,10 +39,10 @@ const Login = ({ users }) => {
 				<div className="content">
 					<p>Login</p>
 					<div style={{ width: '400px', alignItems: 'center' }}>
-						<Select options={loginOptions} />
+						<Select options={loginOptions}  onChange={(val)=>setUser(val.key)}/>
 						<div className="spacerH" />
 						<div className="spacerH" />
-						<button className="buttonCommonWide" onClick={() => dispatch(setAuthedUser('tylermcginnis'))}>
+						<button className={user?"buttonCommonWide":"buttonCommonWide_disabled"} onClick={handleLogin}>
 							Login
 						</button>
 					</div>
