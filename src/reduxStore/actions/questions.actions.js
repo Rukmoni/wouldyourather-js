@@ -1,7 +1,6 @@
 import {GET_QUESTIONS,ADD_QUESTION,SET_ANSWER_IN_QUESTION} from '../actionTypes';
-import { saveQuestion } from '../../database/api';
-import { addQuestionToUser } from '../actions/users.actions';
-
+import { saveQuestion,saveQuestionAnswer } from '../../database/api';
+import { addQuestionToUser,setUserAnswer } from '../actions/users.actions';
 export function getQuestions(questions){
     return{
         type:GET_QUESTIONS,
@@ -35,6 +34,23 @@ export function handleAddQuestion(optionOneText, optionTwoText, author) {
           dispatch(addQuestionToUser(question));
         }
       );
+    };
+  }
+
+  export  function  submitAnswer(authedUser, qid, selectedOption){
+    return dispatch => {
+      try {
+        return saveQuestionAnswer(authedUser, qid, selectedOption).then(
+          question => {
+            dispatch(setUserAnswer(authedUser, question.id, selectedOption));
+            dispatch(updateAnswerInQuestion(authedUser, question.id, selectedOption));
+          }
+        );
+			
+
+			} catch (e) {
+				console.log(e);
+			}
     };
   }
   

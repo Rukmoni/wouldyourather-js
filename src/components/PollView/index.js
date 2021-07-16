@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { saveQuestionAnswer } from '../../database/api';
-import { setUserAnswer } from '../../reduxStore/actions/users.actions';
-import { updateAnswerInQuestion } from '../../reduxStore/actions/questions.actions';
+
+import { submitAnswer } from '../../reduxStore/actions/questions.actions';
 import './styles.css';
 
 const PollView = ({ author, question }) => {
@@ -13,9 +12,8 @@ const PollView = ({ author, question }) => {
 	const handleSubmit = async () => {
 		if (selectedOption) {
 			try {
-				let response = await saveQuestionAnswer(authedUser, question.id, selectedOption);
-				dispatch(setUserAnswer(authedUser, question.id, selectedOption));
-				dispatch(updateAnswerInQuestion(authedUser, question.id, selectedOption));
+				dispatch(submitAnswer(authedUser, question.id, selectedOption))
+				
 
 			} catch (e) {
 				console.log(e);

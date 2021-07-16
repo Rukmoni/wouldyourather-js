@@ -5,7 +5,7 @@ import "./styles.css";
 const QuestionCard=({question,activeIndex})=> {
   const usersState=useSelector((state)=>state.users);
   const history = useHistory();
-  console.log(question);
+
   const author=usersState[question.author];
 
     return (
