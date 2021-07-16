@@ -26,10 +26,10 @@ export function updateAnswerInQuestion(authuser,qid,answer){
   }
 }
 
-export function handleAddQuestion(option1, option2, author) {
+export function handleAddQuestion(optionOneText, optionTwoText, author) {
     console.log("handleAddQuestion::",author)
     return dispatch => {
-      return saveQuestion({ option1, option2, author }).then(
+      return saveQuestion({ optionOneText, optionTwoText, author }).then(
         question => {
           dispatch(addQuestion(question));
           dispatch(addQuestionToUser(question));

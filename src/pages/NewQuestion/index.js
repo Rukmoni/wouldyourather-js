@@ -11,8 +11,8 @@ export class NewQuestion extends React.Component {
 	state = {
 		isSubmitted: false,
 		isLoading: false,
-		option1: '',
-		option2: '',
+		optionOneText: '',
+		optionTwoText: '',
 	};
 
 	handleChange = (e) => {
@@ -24,8 +24,8 @@ export class NewQuestion extends React.Component {
 		console.log('handleSubmit');
 		e.preventDefault();
 		const { authedUser, handleAddQuestion } = this.props;
-		const { option1, option2 } = this.state;
-		await handleAddQuestion(option1, option2, authedUser);
+		const { optionOneText, optionTwoText } = this.state;
+		await handleAddQuestion(optionOneText, optionTwoText, authedUser);
 		this.setState({ isSubmitted: true });
 	};
 	render() {
@@ -40,9 +40,9 @@ export class NewQuestion extends React.Component {
 					<div className="titleBar"> Add New Poll Question</div>
 					<div className="questionContent">
 						<p>Would you rather</p>
-						<input type="text" className="textInput" id="option1" onChange={this.handleChange} />
+						<input type="text" className="textInput" id="optionOneText" onChange={this.handleChange} />
 						or
-						<input type="text" className="textInput" id="option2" onChange={this.handleChange} />
+						<input type="text" className="textInput" id="optionTwoText" onChange={this.handleChange} />
 						<div className="spacerH" />
 						<button className="buttonCommonWide" onClick={this.handleSubmit}>
 							Submit
