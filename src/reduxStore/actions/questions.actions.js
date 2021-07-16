@@ -27,7 +27,7 @@ export function updateAnswerInQuestion(authuser,qid,answer){
 }
 
 export function handleAddQuestion(optionOneText, optionTwoText, author) {
-    console.log("handleAddQuestion::",author)
+
     return dispatch => {
       return saveQuestion({ optionOneText, optionTwoText, author }).then(
         question => {

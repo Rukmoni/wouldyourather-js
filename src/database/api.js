@@ -5,7 +5,7 @@ export function getInitialData(){
 }
 
 export function saveQuestion(question) {
-    console.log("saveQuestion",question)
+
     return _saveQuestion(question);
   }
 

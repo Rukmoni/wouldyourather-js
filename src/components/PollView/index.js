@@ -16,7 +16,7 @@ const PollView = ({ author, question }) => {
 				let response = await saveQuestionAnswer(authedUser, question.id, selectedOption);
 				dispatch(setUserAnswer(authedUser, question.id, selectedOption));
 				dispatch(updateAnswerInQuestion(authedUser, question.id, selectedOption));
-				console.log('response', response);
+
 			} catch (e) {
 				console.log(e);
 			}

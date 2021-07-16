@@ -20,8 +20,6 @@ export class DashBoard extends React.Component {
 		this.setState({ activeTab: id });
 	}
 	render() {
-		console.log("answered",this.props.answeredQuestions);
-		console.log("answered",this.props.unAnsweredQuestions);
 
 		return (
 			<div className="Tabcontainer">
@@ -47,7 +45,7 @@ DashBoard.propTypes={
 }
 function mapStateToProps({ authedUser, users, questions }) {
   if(users){
-	  console.log(users[authedUser].answers)
+
   let answeredIds = Object.keys(users[authedUser]?.answers);
 
 	return {

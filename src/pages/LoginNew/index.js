@@ -12,7 +12,6 @@ const Login = ({ users }) => {
 		
 		
 		let _userList = Object.values(users);
-		console.log('usersState', _userList);
 
 		let _loginOptions = _userList.map((user) => ({
 			key: user.id,

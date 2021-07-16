@@ -24,5 +24,5 @@ export function addQuestionToUser({ id, author }) {
   }
 
   export function handleUserAnswerUpdate(authUser, questionId, answer) {
-    console.log("handleUserAnswerUpdate",authUser)
+   // console.log("handleUserAnswerUpdate",authUser)
   }

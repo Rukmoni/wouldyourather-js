@@ -15,7 +15,7 @@ import './constants/CSS-vars.css';
 class App extends Component {
   componentDidMount () {
     const { dispatch, loading } = this.props
-    console.log("loading",loading);
+
     if(!loading){
       dispatch(handleInitialData())
     }
@@ -23,7 +23,7 @@ class App extends Component {
   }
   render() {
     const {authedUser,users}=this.props;
-    console.log("render loading",users);
+
     if(users===null){
       return <div/>
     } 
@@ -51,7 +51,7 @@ class App extends Component {
 }
 }
 function mapStateToProps ({ authedUser, users }) {
-  console.log("mapStateToProps",users)
+
   return {
     loading:users===null,
     

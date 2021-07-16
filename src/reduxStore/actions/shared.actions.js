@@ -7,7 +7,7 @@ import {showLoading,hideLoading} from 'react-redux-loading';
 //const AUTHED_ID = 'tylermcginnis'
 
 export function handleInitialData () {
-    console.log("handleInitialData")
+
   return (dispatch) => {
     dispatch(showLoading())
     return getInitialData()

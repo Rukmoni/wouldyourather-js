@@ -26,7 +26,7 @@ const ResultView = ({ author, question }) => {
 		let percent2 = (CountOption2 / votesTotal) * 100 + '%';
 		let _yourVote = author.answers[question.id];
 		setYourVote(_yourVote);
- console.log(_yourVote);
+
 		setOptionOnePercent(percent1);
 		setOptionTwoPercent(percent2);
 	}, [author,question]);

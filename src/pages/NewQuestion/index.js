@@ -21,7 +21,7 @@ export class NewQuestion extends React.Component {
 	};
 
 	handleSubmit = async (e) => {
-		console.log('handleSubmit');
+
 		e.preventDefault();
 		const { authedUser, handleAddQuestion } = this.props;
 		const { optionOneText, optionTwoText } = this.state;
