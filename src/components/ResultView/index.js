@@ -5,9 +5,9 @@ import './styles.css';
 
 const Badge = () => {
 	return (
-		<div class="wrapper">
-			<div class="ribbon-wrapper-green">
-				<div class="ribbon-green">You</div>
+		<div className="wrapper">
+			<div className="ribbon-wrapper-green">
+				<div className="ribbon-green">You</div>
 			</div>
 		</div>
 	);
@@ -26,7 +26,7 @@ const ResultView = ({ author, question }) => {
 		let percent2 = (CountOption2 / votesTotal) * 100 + '%';
 		let _yourVote = author.answers[question.id];
 		setYourVote(_yourVote);
-
+ console.log(_yourVote);
 		setOptionOnePercent(percent1);
 		setOptionTwoPercent(percent2);
 	}, [author,question]);
@@ -61,9 +61,9 @@ const ResultView = ({ author, question }) => {
 					</div>
 
 					<div className="grayBox">
-						<div className="normalContent">
-                        <div className="leftalign">{question.optionTwo.text}</div>
-			
+					{yourVote === 'optionTwo' && <Badge />}
+					<div className={yourVote === 'optionTwo' ? 'resultContent' : 'normalContent'}>
+							<div className="leftalign">{question.optionTwo.text}</div>
 							<div className="spacerH"></div>
 							<div className="myProgress">
 								<div className="myBar" style={{ width: `${optionTwoPercent}` }}>
