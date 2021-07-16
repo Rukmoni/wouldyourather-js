@@ -16,6 +16,9 @@ const Badge = () => {
 const ResultView = ({ author, question }) => {
 	const [optionOnePercent, setOptionOnePercent] = useState('0%');
 	const [optionTwoPercent, setOptionTwoPercent] = useState('0%');
+	const [countOption1,setCountOption1]=useState(0);
+	const [countOption2,setCountOption2]=useState(0);
+	const [total,setTotal]=useState(0);
 	const [yourVote, setYourVote] = useState('');
 
 	useEffect(() => {
@@ -25,8 +28,10 @@ const ResultView = ({ author, question }) => {
 		let percent1 = (CountOption1 / votesTotal) * 100 + '%';
 		let percent2 = (CountOption2 / votesTotal) * 100 + '%';
 		let _yourVote = author.answers[question.id];
+		setCountOption1(CountOption1);
+		setCountOption2(CountOption2);
 		setYourVote(_yourVote);
-
+		setTotal(votesTotal);
 		setOptionOnePercent(percent1);
 		setOptionTwoPercent(percent2);
 	}, [author,question]);
@@ -57,6 +62,8 @@ const ResultView = ({ author, question }) => {
 									{optionOnePercent}
 								</div>
 							</div>
+							<div className="spacerH"></div>
+							<div className="leftalign">{countOption1} out of {total} votes</div>
 						</div>
 					</div>
 
@@ -70,6 +77,7 @@ const ResultView = ({ author, question }) => {
 									{optionTwoPercent}
 								</div>
 							</div>
+							<div className="leftalign">{countOption2} out of {total} votes</div>
 						</div>
 					</div>
                     <Link to="/">back</Link>

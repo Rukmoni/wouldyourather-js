@@ -177,9 +177,9 @@
   .resultContent{
     display: flex;
     flex-direction: column;
-  justify-content: space-between;
+
     position: relative;
-    top:-30px;
+
     left:10px;
     align-content: space-evenly;
  
@@ -188,7 +188,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-  justify-content: space-between;
+
     top:10px;
     left:10px;
   }
@@ -236,7 +236,7 @@
   }
 
   .leftalign{
-
+ color:#333;
    position: relative;
 width:80%;
 
