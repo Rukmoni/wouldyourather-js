@@ -16,7 +16,7 @@ const NavBar=()=> {
         </li>
         <li>
          {/*  <a href="/newquestion">NewQuestion</a> */}
-         <Link to="/newquestion">NewQuestion</Link>
+         <Link to="/add">NewQuestion</Link>
         </li>
         <li>
           {/* <a href="/leaderboard">LeaderBoard</a> */}

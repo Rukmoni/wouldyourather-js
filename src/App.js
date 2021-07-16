@@ -41,7 +41,7 @@ class App extends Component {
      <Route path='/question/:id' component={Question}/>
 
      <Route path='/leaderboard' component={LeaderBoard} />
-      <Route path='/newquestion' component={NewQuestion} />
+      <Route path='/add' component={NewQuestion} />
       </div>
    }
      </Fragment>
