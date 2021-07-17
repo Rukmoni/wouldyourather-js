@@ -25,8 +25,8 @@ const ResultView = ({ author, question }) => {
 		let CountOption1 = question.optionOne.votes.length;
 		let CountOption2 = question.optionTwo.votes.length;
 		let votesTotal = CountOption1 + CountOption2;
-		let percent1 = (CountOption1 / votesTotal) * 100 + '%';
-		let percent2 = (CountOption2 / votesTotal) * 100 + '%';
+		let percent1 = Math.round((CountOption1 / votesTotal) * 100 )+ '%';
+		let percent2 =  Math.round((CountOption2 / votesTotal) * 100) + '%';
 		let _yourVote = author.answers[question.id];
 		setCountOption1(CountOption1);
 		setCountOption2(CountOption2);

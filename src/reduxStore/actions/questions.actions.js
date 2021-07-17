@@ -38,12 +38,14 @@ export function handleAddQuestion(optionOneText, optionTwoText, author) {
   }
 
   export  function  submitAnswer(authedUser, qid, selectedOption){
+   // console.log(authedUser, qid, selectedOption);
     return dispatch => {
       try {
         return saveQuestionAnswer(authedUser, qid, selectedOption).then(
           question => {
-            dispatch(setUserAnswer(authedUser, question.id, selectedOption));
-            dispatch(updateAnswerInQuestion(authedUser, question.id, selectedOption));
+            console.log(question);
+            dispatch(setUserAnswer(authedUser, qid, selectedOption));
+            dispatch(updateAnswerInQuestion(authedUser, qid, selectedOption));
           }
         );
 			
