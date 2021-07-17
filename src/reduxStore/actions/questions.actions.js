@@ -43,7 +43,6 @@ export function handleAddQuestion(optionOneText, optionTwoText, author) {
       try {
         return saveQuestionAnswer(authedUser, qid, selectedOption).then(
           question => {
-            console.log(question);
             dispatch(setUserAnswer(authedUser, qid, selectedOption));
             dispatch(updateAnswerInQuestion(authedUser, qid, selectedOption));
           }
